@@ -1,12 +1,10 @@
 <!DOCTYPE html>
+<!--suppress VueMissingComponentImportInspection, JSUnresolvedVariable -->
 <html lang="fr" class="dark">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script type="module" src="main.js" defer></script>
     <title>App</title>
@@ -15,9 +13,37 @@
         body{
             background: rgb(24 23 23) !important;
         }
-        #app-header {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+        #app {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 2rem;
+
+            font-weight: normal;
+        }
+
+        a{
+            text-decoration: none;
+            color: hsla(160, 100%, 37%, 1);
+            transition: 0.4s;
+        }
+
+        @media (hover: hover) {
+            a:hover {
+                background-color: hsla(160, 100%, 37%, 0.2);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            body {
+                display: flex;
+                place-items: center;
+            }
+
+            #app {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                padding: 0 2rem;
+            }
         }
     </style>
 </head>
